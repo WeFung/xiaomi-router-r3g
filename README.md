@@ -7,4 +7,5 @@
 7、搜索clash（sing-box也有），安装，成功之后配置节点信息就可以了；
 8、（可选）要是安装sing-box的，它的图形界面在官网下载的不知为什么安装不了，需要安装momo图像界面，在软件包找不到的，有2种方法：
 ①、可以按照我的这个链接：https://gh.llkk.cc/https://github.com/nikkinikki-org/OpenWrt-momo/releases/download/v1.1.0/momo_mipsel_24kc-openwrt-24.10.tar.gz下载或者我已下好的，不过这个是压缩包来的，需要解压,而且解压完你要把安装的上传到软件包安装，我个人就装了3个文件，分别是“momo-2025.12.31...”,"luci-i18n-momo...","luci-app-momo...",
-②、用ssh工具登录路由器ip地址192.168.1.1，用户名root，密码默认admin，除非自己修改了，接着在输入框输入：cd /tmp(定位到临时文件夹)，然后输入下载链接：wget -qO- https://gh.llkk.cc/https://github.com/nikkinikki-org/OpenWrt-momo/releases/download/v1.1.0/momo_mipsel_24kc-openwrt-24.10.tar.gz | tar xvzf -  然后它下载完就会解压，接着
+②、用ssh工具登录路由器ip地址192.168.1.1，用户名root，密码默认admin，除非自己修改了，接着在输入框输入：cd /tmp(定位到临时文件夹)，然后输入下载链接：wget -qO- https://gh.llkk.cc/https://github.com/nikkinikki-org/OpenWrt-momo/releases/download/v1.1.0/momo_mipsel_24kc-openwrt-24.10.tar.gz | tar xvzf -  然后它下载完就会解压（不会自动解压就输入命令：tar -xvzf momo_mipsel_24kc-openwrt-24.10.tar.gz），接着输入安装命令:apkg install momo_2025.12.31-r1_mipsel_24kc.ipk,完成接着一下输入：apkg install luci-app-momo_1.1.0-r1_all.ipk,最后安装：apkg install luci-i18n-momo-zh-cn_25.363.32311~ce1d6a9_all.ipk
+以上两种方法安装完了记得要重启路由器，momo的界面就会在服务选项那的
